@@ -2,9 +2,9 @@ package depreciation.backend.util;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import darya.risks.backend.exceprion.ApplicationException;
-import darya.risks.backend.exceprion.BackendException;
-import darya.risks.entity.enums.ResponseStatus;
+import depreciation.backend.exception.ApplicationException;
+import depreciation.backend.exception.BackendException;
+import depreciation.enums.ResponseStatus;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

@@ -1,9 +1,9 @@
 package depreciation.backend.starter;
 
 
-import darya.risks.backend.builder.ServerBuilder;
-import darya.risks.backend.exceprion.ApplicationException;
-import darya.risks.backend.server.Server;
+import depreciation.backend.builder.ServerBuilder;
+import depreciation.backend.exception.ApplicationException;
+import depreciation.backend.server.Server;
 import org.apache.log4j.Logger;
 
 

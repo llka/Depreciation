@@ -1,6 +1,9 @@
 package depreciation.backend.builder;
 
 
+import depreciation.backend.exception.ApplicationException;
+import depreciation.backend.server.Server;
+import depreciation.enums.ResponseStatus;
 
 public class ServerBuilder {
     private static final int ARG_PORT_NUMBER_INDEX = 0;

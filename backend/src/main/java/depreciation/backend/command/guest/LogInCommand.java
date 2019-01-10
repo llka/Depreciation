@@ -1,7 +1,6 @@
 package depreciation.backend.command.guest;
 
 
-
 import depreciation.backend.command.ActionCommand;
 import depreciation.backend.command.CommandType;
 import depreciation.backend.exception.ApplicationException;

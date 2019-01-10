@@ -1,11 +1,11 @@
 package depreciation.backend.dao;
 
 
-import darya.risks.backend.database.ConnectionPool;
-import darya.risks.backend.exceprion.ApplicationException;
-import darya.risks.entity.Contact;
-import darya.risks.entity.enums.ResponseStatus;
-import darya.risks.entity.enums.RoleEnum;
+import depreciation.backend.database.ConnectionPool;
+import depreciation.backend.exception.ApplicationException;
+import depreciation.entity.Contact;
+import depreciation.enums.ResponseStatus;
+import depreciation.enums.RoleEnum;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

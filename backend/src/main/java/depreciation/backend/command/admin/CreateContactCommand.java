@@ -1,16 +1,16 @@
 package depreciation.backend.command.admin;
 
 
-import darya.risks.backend.command.ActionCommand;
-import darya.risks.backend.command.CommandType;
-import darya.risks.backend.exceprion.ApplicationException;
-import darya.risks.backend.service.ContactService;
-import darya.risks.backend.util.JsonUtil;
-import darya.risks.entity.Contact;
-import darya.risks.entity.enums.ResponseStatus;
-import darya.risks.entity.technical.CommandRequest;
-import darya.risks.entity.technical.CommandResponse;
-import darya.risks.entity.technical.Session;
+import depreciation.backend.command.ActionCommand;
+import depreciation.backend.command.CommandType;
+import depreciation.backend.exception.ApplicationException;
+import depreciation.backend.service.ContactService;
+import depreciation.backend.util.JsonUtil;
+import depreciation.entity.Contact;
+import depreciation.entity.technical.CommandRequest;
+import depreciation.entity.technical.CommandResponse;
+import depreciation.entity.technical.Session;
+import depreciation.enums.ResponseStatus;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

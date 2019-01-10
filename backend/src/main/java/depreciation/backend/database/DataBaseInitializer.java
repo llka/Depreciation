@@ -1,7 +1,7 @@
 package depreciation.backend.database;
 
 
-import darya.risks.backend.exceprion.BackendException;
+import depreciation.backend.exception.BackendException;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

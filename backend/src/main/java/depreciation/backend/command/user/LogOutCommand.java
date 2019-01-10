@@ -1,13 +1,13 @@
 package depreciation.backend.command.user;
 
 
-import darya.risks.backend.command.ActionCommand;
-import darya.risks.entity.enums.ResponseStatus;
-import darya.risks.entity.enums.RoleEnum;
-import darya.risks.entity.technical.CommandRequest;
-import darya.risks.entity.technical.CommandResponse;
-import darya.risks.entity.technical.Session;
-import darya.risks.entity.technical.Visitor;
+import depreciation.backend.command.ActionCommand;
+import depreciation.entity.technical.CommandRequest;
+import depreciation.entity.technical.CommandResponse;
+import depreciation.entity.technical.Session;
+import depreciation.entity.technical.Visitor;
+import depreciation.enums.ResponseStatus;
+import depreciation.enums.RoleEnum;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 

@@ -1,6 +1,7 @@
 package depreciation.backend.exception;
 
 
+import depreciation.enums.ResponseStatus;
 
 public class ApplicationException extends Exception {
 

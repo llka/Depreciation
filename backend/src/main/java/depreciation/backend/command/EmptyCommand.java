@@ -1,10 +1,10 @@
 package depreciation.backend.command;
 
 
-import darya.risks.entity.enums.ResponseStatus;
-import darya.risks.entity.technical.CommandRequest;
-import darya.risks.entity.technical.CommandResponse;
-import darya.risks.entity.technical.Session;
+import depreciation.entity.technical.CommandRequest;
+import depreciation.entity.technical.CommandResponse;
+import depreciation.entity.technical.Session;
+import depreciation.enums.ResponseStatus;
 import org.apache.log4j.LogManager;
 import org.apache.log4j.Logger;
 
