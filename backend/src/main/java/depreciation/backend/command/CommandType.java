@@ -5,10 +5,7 @@ import depreciation.backend.command.admin.CreateContactCommand;
 import depreciation.backend.command.admin.DeleteContactCommand;
 import depreciation.backend.command.guest.LogInCommand;
 import depreciation.backend.command.guest.RegisterCommand;
-import depreciation.backend.command.user.GetContactCommand;
-import depreciation.backend.command.user.GetContactsCommand;
-import depreciation.backend.command.user.LogOutCommand;
-import depreciation.backend.command.user.UpdateContactCommand;
+import depreciation.backend.command.user.*;
 import depreciation.enums.RoleEnum;
 
 import java.util.EnumSet;
@@ -64,6 +61,32 @@ public enum CommandType {
         {
             this.command = new DeleteContactCommand();
             this.role = EnumSet.of(RoleEnum.ADMIN);
+        }
+    },
+
+
+    CREATE_EQUIPMENT {
+        {
+            this.command = new CreateEquipmentCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
+    CREATE_COMPANY {
+        {
+            this.command = new CreateCompanyCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
+    GET_CONTACT_COMPANIES {
+        {
+            this.command = new GetContactCompaniesCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
+    GET_COMPANY_EQUIPMENT {
+        {
+            this.command = new GetCompanyEquipmentCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
         }
     },
 

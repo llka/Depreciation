@@ -4,6 +4,7 @@ import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Positive;
 import java.math.BigDecimal;
+import java.util.Date;
 import java.util.Objects;
 
 public class Equipment implements DatabaseEntity {
@@ -13,6 +14,7 @@ public class Equipment implements DatabaseEntity {
     @NotNull
     @Positive
     private int exploitationPeriodInMonth;
+    private Date exploitationStartDate;
     @NotNull
     private BigDecimal price;
 
@@ -51,6 +53,14 @@ public class Equipment implements DatabaseEntity {
         this.title = title;
     }
 
+    public Date getExploitationStartDate() {
+        return exploitationStartDate;
+    }
+
+    public void setExploitationStartDate(Date exploitationStartDate) {
+        this.exploitationStartDate = exploitationStartDate;
+    }
+
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
@@ -59,12 +69,14 @@ public class Equipment implements DatabaseEntity {
         return id == equipment.id &&
                 exploitationPeriodInMonth == equipment.exploitationPeriodInMonth &&
                 Objects.equals(title, equipment.title) &&
+                Objects.equals(exploitationStartDate, equipment.exploitationStartDate) &&
                 Objects.equals(price, equipment.price);
     }
 
     @Override
     public int hashCode() {
-        return Objects.hash(id, title, exploitationPeriodInMonth, price);
+
+        return Objects.hash(id, title, exploitationPeriodInMonth, exploitationStartDate, price);
     }
 
     @Override
@@ -73,6 +85,7 @@ public class Equipment implements DatabaseEntity {
                 "id=" + id +
                 ", title='" + title + '\'' +
                 ", exploitationPeriodInMonth=" + exploitationPeriodInMonth +
+                ", exploitationStartDate=" + exploitationStartDate +
                 ", price=" + price +
                 '}';
     }
