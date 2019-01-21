@@ -30,7 +30,7 @@ public class CompanyDAO {
     private static final String GET_ALL = "SELECT `company_id`, `title`, `foundation_date`, `business_scope`, `contact_contact_id` " +
             " FROM `company` ";
     private static final String GET_CONTACT_COMPANIES = "SELECT `company_id`, `title`, `foundation_date`, `business_scope`, `contact_contact_id` " +
-            " FROM `company` WHERE `contact_id` = ?";
+            " FROM `company` WHERE `contact_contact_id` = ?";
     private static final String DELETE = "DELETE FROM `company` WHERE `company_id`= ?";
 
     private static final String COLUMN_COMPANY_ID = "company_id";
