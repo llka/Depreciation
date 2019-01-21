@@ -90,6 +90,13 @@ public enum CommandType {
         }
     },
 
+    GENERATE_REPORT {
+        {
+            this.command = new GenerateReportCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
+
 
     EMPTY {
         {
