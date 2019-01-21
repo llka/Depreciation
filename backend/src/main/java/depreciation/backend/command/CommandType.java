@@ -89,6 +89,12 @@ public enum CommandType {
             this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
         }
     },
+    GET_COMPANY {
+        {
+            this.command = new GetCompanyCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
 
     GENERATE_REPORT {
         {

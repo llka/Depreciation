@@ -59,11 +59,11 @@ public class MainController {
     private MenuItem menuLogIn;
 
     @FXML
-    private MenuItem menuMyProjects;
+    private MenuItem menuMyCompanies;
     @FXML
-    private MenuItem menuAllProjects;
+    private MenuItem menuAllCompanies;
     @FXML
-    private MenuItem menuNewProject;
+    private MenuItem menuNewCompany;
 
 
     @FXML
@@ -364,10 +364,10 @@ public class MainController {
 
 
     @FXML
-    void openMyProjectsView(ActionEvent event) {
+    void openMyCompaniesView(ActionEvent event) {
         if (isAuthenticatedUser()) {
-//            MyProjectsController.setFirstOpened(true);
-            main.showView("/view/myProjectsView.fxml");
+            MyCompaniesController.setFirstOpened(true);
+            main.showView("/view/myCompaniesView.fxml");
         } else {
             alert(Alert.AlertType.ERROR, "You are not authorized!", "You are not authorized!");
         }
@@ -406,10 +406,10 @@ public class MainController {
             menuRegister.setDisable(true);
 
             menuMyProfile.setDisable(true);
-            menuMyProjects.setDisable(true);
-            menuNewProject.setDisable(true);
+            menuMyCompanies.setDisable(true);
+            menuNewCompany.setDisable(true);
 
-            menuAllProjects.setDisable(true);
+            menuAllCompanies.setDisable(true);
             menuManageUsersProfiles.setDisable(true);
             menuGenerateReport.setDisable(true);
         } else {
@@ -423,10 +423,10 @@ public class MainController {
                         menuRegister.setDisable(false);
 
                         menuMyProfile.setDisable(true);
-                        menuMyProjects.setDisable(true);
-                        menuNewProject.setDisable(true);
+                        menuMyCompanies.setDisable(true);
+                        menuNewCompany.setDisable(true);
 
-                        menuAllProjects.setDisable(true);
+                        menuAllCompanies.setDisable(true);
                         menuManageUsersProfiles.setDisable(true);
                         menuGenerateReport.setDisable(true);
 
@@ -437,10 +437,10 @@ public class MainController {
                         menuRegister.setDisable(true);
 
                         menuMyProfile.setDisable(false);
-                        menuMyProjects.setDisable(false);
-                        menuNewProject.setDisable(false);
+                        menuMyCompanies.setDisable(false);
+                        menuNewCompany.setDisable(false);
 
-                        menuAllProjects.setDisable(true);
+                        menuAllCompanies.setDisable(true);
                         menuManageUsersProfiles.setDisable(true);
                         menuGenerateReport.setDisable(false);
 
@@ -451,10 +451,10 @@ public class MainController {
                         menuRegister.setDisable(true);
 
                         menuMyProfile.setDisable(false);
-                        menuMyProjects.setDisable(false);
-                        menuNewProject.setDisable(false);
+                        menuMyCompanies.setDisable(false);
+                        menuNewCompany.setDisable(false);
 
-                        menuAllProjects.setDisable(false);
+                        menuAllCompanies.setDisable(false);
                         menuManageUsersProfiles.setDisable(false);
                         menuGenerateReport.setDisable(false);
                         break;
