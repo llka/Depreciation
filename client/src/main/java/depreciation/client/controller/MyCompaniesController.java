@@ -57,6 +57,7 @@ public class MyCompaniesController {
                     editButton.setOnAction(event -> {
                         TableRow row = getTableRow();
                         Company company = (Company) row.itemProperty().getValue();
+                        logger.debug(company);
                         openEquipmentView(company);
                     });
                     setGraphic(editButton);
@@ -85,7 +86,7 @@ public class MyCompaniesController {
 
     private void fillTable() {
         try {
-            ContextHolder.getClient().sendRequest(new CommandRequest("GET_MY_COMPANIES"));
+            ContextHolder.getClient().sendRequest(new CommandRequest("GET_CONTACT_COMPANIES"));
             CommandResponse response = ContextHolder.getLastResponse();
             if (response.getStatus().is2xxSuccessful()) {
                 CompanyListDTO companyListDTO = JsonUtil.deserialize(response.getBody(), CompanyListDTO.class);
@@ -102,7 +103,7 @@ public class MyCompaniesController {
 
     private void openEquipmentView(Company company) {
         CompanyController.setMain(main);
-        CompanyController.setCompany(company);
+        CompanyController.setCompanyId(company.getId());
         main.showView("/view/companyView.fxml");
     }
 

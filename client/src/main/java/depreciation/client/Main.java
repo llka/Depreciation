@@ -16,7 +16,7 @@ import java.io.IOException;
 public class Main extends Application {
     private static final Logger logger = LogManager.getLogger(Main.class);
 
-    private static final String WINDOW_TITLE = "Risks";
+    private static final String WINDOW_TITLE = "Depreciation";
     private static final int WINDOW_WIDTH = 664;
     private static final int WINDOW_HEIGHT = 470;
 

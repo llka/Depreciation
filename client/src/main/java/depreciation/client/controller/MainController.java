@@ -367,6 +367,7 @@ public class MainController {
     void openMyCompaniesView(ActionEvent event) {
         if (isAuthenticatedUser()) {
             MyCompaniesController.setFirstOpened(true);
+            MyCompaniesController.setMain(main);
             main.showView("/view/myCompaniesView.fxml");
         } else {
             alert(Alert.AlertType.ERROR, "You are not authorized!", "You are not authorized!");
@@ -374,7 +375,7 @@ public class MainController {
     }
 
     @FXML
-    void openNewProjectView(ActionEvent event) {
+    void openNewCompanyView(ActionEvent event) {
         if (isAuthenticatedUser()) {
 //            NewProjectController.setFirstOpened(true);
 //            NewProjectController.setMain(main);
@@ -385,7 +386,7 @@ public class MainController {
     }
 
     @FXML
-    void openAllProjectsView(ActionEvent event) {
+    void openAllCompaniesView(ActionEvent event) {
         if (isAuthenticatedAdmin()) {
 //            AllProjectsController.setFirstOpened(true);
 //            AllProjectsController.setMain(main);
