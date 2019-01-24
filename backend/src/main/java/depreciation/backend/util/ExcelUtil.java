@@ -64,13 +64,19 @@ public class ExcelUtil {
                     row.createCell(cellIndex++).setCellValue(dateFormat.format(company.getFoundationDate()));
                     row.createCell(cellIndex++).setCellValue(company.getBusinessScope());
 
+                    boolean newRow = false;
                     for (Equipment equipment : company.getEquipmentList()) {
-                        row.createCell(cellIndex++).setCellValue(equipment.getId());
-                        row.createCell(cellIndex++).setCellValue(equipment.getTitle());
-                        row.createCell(cellIndex++).setCellValue(equipment.getExploitationPeriodInMonth());
-                        row.createCell(cellIndex++).setCellValue(dateFormat.format(equipment.getExploitationStartDate()));
-                        row.createCell(cellIndex++).setCellValue(equipment.getPrice().toString());
-                        row.createCell(cellIndex++).setCellValue(equipmentService.calculateDepreciationByDate(new Date(), equipment).getCurrentPrice().toString());
+                        int equipmentCellIndex = cellIndex;
+                        if (newRow) {
+                            row = sheet.createRow(rowIndex++);
+                        }
+                        row.createCell(equipmentCellIndex++).setCellValue(equipment.getId());
+                        row.createCell(equipmentCellIndex++).setCellValue(equipment.getTitle());
+                        row.createCell(equipmentCellIndex++).setCellValue(equipment.getExploitationPeriodInMonth());
+                        row.createCell(equipmentCellIndex++).setCellValue(dateFormat.format(equipment.getExploitationStartDate()));
+                        row.createCell(equipmentCellIndex++).setCellValue(equipment.getPrice().toString());
+                        row.createCell(equipmentCellIndex++).setCellValue(equipmentService.calculateDepreciationByDate(new Date(), equipment).getCurrentPrice().toString());
+                        newRow = true;
                     }
                 }
             }

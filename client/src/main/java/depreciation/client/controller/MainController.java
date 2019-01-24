@@ -344,7 +344,7 @@ public class MainController {
             params.put("path", directoryPath);
 
             try {
-                ContextHolder.getClient().sendRequest(new CommandRequest("GENERATE_EXCEL_PROJECTS_REPORT", params));
+                ContextHolder.getClient().sendRequest(new CommandRequest("GENERATE_REPORT", params));
 
                 CommandResponse response = ContextHolder.getLastResponse();
                 if (response.getStatus().is2xxSuccessful()) {

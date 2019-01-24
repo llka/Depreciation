@@ -104,6 +104,7 @@ public class MyCompaniesController {
     private void openEquipmentView(Company company) {
         CompanyController.setMain(main);
         CompanyController.setCompanyId(company.getId());
+        CompanyController.setFirstOpened(true);
         main.showView("/view/companyView.fxml");
     }
 

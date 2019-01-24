@@ -50,4 +50,15 @@ public class CompanyService {
         return companyDAO.getById(savedCompany.getId());
     }
 
+    public Company updateCompany(Company company, Contact contact) throws ApplicationException {
+        Company updatedCompany = companyDAO.update(company);
+
+        for (Equipment equipment : company.getEquipmentList()) {
+            if (equipment.getId() == 0) {
+                equipmentDAO.save(equipment, updatedCompany.getId());
+            }
+        }
+        return companyDAO.getById(updatedCompany.getId());
+    }
+
 }

@@ -21,6 +21,9 @@ public class GetContactCompaniesCommand implements ActionCommand {
 
         CompanyListDTO companyListDTO = new CompanyListDTO(companyDAO.getContactCompanies(session.getVisitor().getContact().getId()));
 
+        logger.debug("GetContactCompaniesCommand");
+        companyListDTO.getCompanyList().forEach(logger::debug);
+
         return new CommandResponse(JsonUtil.serialize(companyListDTO), ResponseStatus.OK);
     }
 }
