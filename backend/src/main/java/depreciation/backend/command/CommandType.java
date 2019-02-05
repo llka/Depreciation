@@ -3,6 +3,7 @@ package depreciation.backend.command;
 
 import depreciation.backend.command.admin.CreateContactCommand;
 import depreciation.backend.command.admin.DeleteContactCommand;
+import depreciation.backend.command.admin.GetAllCompaniesCommand;
 import depreciation.backend.command.guest.LogInCommand;
 import depreciation.backend.command.guest.RegisterCommand;
 import depreciation.backend.command.user.*;
@@ -99,6 +100,12 @@ public enum CommandType {
         {
             this.command = new GetCompanyCommand();
             this.role = EnumSet.of(RoleEnum.ADMIN, RoleEnum.USER);
+        }
+    },
+    GET_ALL_COMPANIES {
+        {
+            this.command = new GetAllCompaniesCommand();
+            this.role = EnumSet.of(RoleEnum.ADMIN);
         }
     },
 

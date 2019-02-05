@@ -388,9 +388,9 @@ public class MainController {
     @FXML
     void openAllCompaniesView(ActionEvent event) {
         if (isAuthenticatedAdmin()) {
-//            AllProjectsController.setFirstOpened(true);
-//            AllProjectsController.setMain(main);
-            main.showView("/view/allProjectsView.fxml");
+            AllCompaniesController.setFirstOpened(true);
+            AllCompaniesController.setMain(main);
+            main.showView("/view/allCompaniesView.fxml");
         } else {
             alert(Alert.AlertType.ERROR, "You are not authorized!", "Only Admin can see all projects!!");
         }

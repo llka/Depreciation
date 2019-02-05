@@ -7,7 +7,8 @@
             onMouseEntered="#onMouseEntered" prefHeight="470.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8"
             xmlns:fx="http://javafx.com/fxml/1" fx:controller="depreciation.client.controller.CompanyController">
     <children>
-        <Button fx:id="addNewEquipmentBtn" layoutX="506.0" layoutY="139.0" mnemonicParsing="false" onAction="#addNewEquipment"
+        <Button fx:id="addNewEquipmentBtn" layoutX="506.0" layoutY="139.0" mnemonicParsing="false"
+                onAction="#addNewEquipment"
                 prefHeight="25.0" prefWidth="135.0" text="Add New Equipment"/>
         <Button fx:id="saveBtn" layoutX="494.0" layoutY="437.0" mnemonicParsing="false" onAction="#saveProject"
                 prefHeight="25.0" prefWidth="83.0" text="Save"/>

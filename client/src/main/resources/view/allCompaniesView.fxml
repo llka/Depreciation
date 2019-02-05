@@ -6,7 +6,7 @@
 <?import javafx.scene.text.Font?>
 <AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0"
             prefWidth="664.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1"
-            fx:controller="depreciation.client.controller.MyCompaniesController">
+            fx:controller="depreciation.client.controller.AllCompaniesController">
     <children>
         <VBox layoutX="69.0" layoutY="24.0" prefHeight="112.0" prefWidth="110.0" spacing="4.0"/>
         <TableView fx:id="companiesTable" editable="true" layoutX="42.0" layoutY="89.0" prefHeight="354.0"
@@ -22,7 +22,7 @@
                              text="Equipment details"/>
             </columns>
         </TableView>
-        <Label layoutX="283.0" layoutY="38.0" text="My Companies">
+        <Label layoutX="283.0" layoutY="38.0" text="All Companies">
             <font>
                 <Font size="14.0"/>
             </font>
