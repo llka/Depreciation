@@ -21,7 +21,7 @@ import java.text.SimpleDateFormat;
 import static depreciation.client.util.AlertUtil.alert;
 
 public class AllCompaniesController {
-    private static final Logger logger = LogManager.getLogger(MyCompaniesController.class);
+    private static final Logger logger = LogManager.getLogger(AllCompaniesController.class);
 
     private static final String DATE_TIME_FORMAT_PATTERN = "yyyy-MM-dd";
     private static boolean firstOpened = true;

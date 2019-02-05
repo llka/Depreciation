@@ -377,9 +377,8 @@ public class MainController {
     @FXML
     void openNewCompanyView(ActionEvent event) {
         if (isAuthenticatedUser()) {
-//            NewProjectController.setFirstOpened(true);
-//            NewProjectController.setMain(main);
-            main.showView("/view/newProjectView.fxml");
+            CreateCompanyController.setMain(main);
+            main.showView("/view/createNewCompanyView.fxml");
         } else {
             alert(Alert.AlertType.ERROR, "You are not authorized!", "You are not authorized!");
         }

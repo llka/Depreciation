@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity"
+            prefHeight="470.0" prefWidth="664.0" xmlns="http://javafx.com/javafx/8"
+            xmlns:fx="http://javafx.com/fxml/1" fx:controller="depreciation.client.controller.CreateCompanyController">
+    <children>
+        <Button fx:id="addNewEquipmentBtn" layoutX="506.0" layoutY="139.0" mnemonicParsing="false"
+                onAction="#addNewEquipment" prefHeight="25.0" prefWidth="135.0" text="Add New Equipment"/>
+        <Button fx:id="saveBtn" layoutX="494.0" layoutY="437.0" mnemonicParsing="false" onAction="#saveCompany"
+                prefHeight="25.0" prefWidth="83.0" text="Save"/>
+        <VBox layoutX="148.0" layoutY="54.0" prefHeight="61.0" prefWidth="202.0" spacing="4.0">
+            <children>
+                <TextField fx:id="titleTextField" prefHeight="25.0" prefWidth="261.0" promptText="Title"/>
+                <TextField fx:id="scopeTextField" promptText="Business Scope"/>
+                <DatePicker fx:id="foundationDatePicker" prefHeight="25.0" prefWidth="202.0"/>
+            </children>
+        </VBox>
+        <VBox layoutX="47.0" layoutY="58.0" prefHeight="51.0" prefWidth="89.0" spacing="12.0">
+            <children>
+                <Label text="Title *"/>
+                <Label text="Business scope *"/>
+                <Label text="Foundation Date *"/>
+            </children>
+        </VBox>
+        <TableView fx:id="equipmentTable" editable="true" layoutX="47.0" layoutY="174.0" prefHeight="256.0"
+                   prefWidth="593.0" tableMenuButtonVisible="true">
+            <columns>
+                <TableColumn fx:id="idColumn" prefWidth="28.0" text="Id"/>
+                <TableColumn fx:id="titleColumn" prefWidth="110.0" text="Title"/>
+                <TableColumn fx:id="exploitationStartDateColumn" minWidth="6.0" prefWidth="140.0"
+                             text="Exploitation Start Date"/>
+                <TableColumn fx:id="exploitationPeriodInMonthColumn" prefWidth="127.0"
+                             text="Exploitation Period In Month"/>
+                <TableColumn fx:id="initialPriceColumn" prefWidth="84.0" text="Initial Price"/>
+                <TableColumn fx:id="currentPriceColumn" prefWidth="100.0" text="Current Price"/>
+            </columns>
+        </TableView>
+        <Label alignment="CENTER" layoutX="281.0" layoutY="28.0" text="Create Company">
+            <font>
+                <Font size="14.0"/>
+            </font>
+        </Label>
+        <Label layoutX="47.0" layoutY="143.0" text="Equipment :"/>
+        <Button fx:id="cancelBtn" layoutX="588.0" layoutY="437.0" mnemonicParsing="false" onAction="#cancel"
+                text="Cancel"/>
+    </children>
+</AnchorPane>
